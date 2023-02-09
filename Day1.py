@@ -12,3 +12,5 @@ b = temp
 
 print("a: " + a)
 print("b: " + b)
+
+print("Your band name could be " +input("What\'s the name of the city you grew up in? ") + " " + input("What\'s your pet\'s name? "))
