@@ -67,3 +67,35 @@ else:
     print("Pizza size incorrectly entered.")
 
 print(f"Your final bill is: ${bill}.")
+
+
+# Love calculator
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+love_score = 0
+true_score = 0
+for el in 'true':
+    for letter in name1.lower():
+        if el == letter:
+            true_score+=1
+    for letter in name2.lower():
+        if el == letter:
+            true_score+=1
+
+for el in 'love':
+    for letter in name1.lower():
+        if el == letter:
+            love_score+=1
+    for letter in name2.lower():
+        if el == letter:
+            love_score+=1
+
+total_score = int(str(true_score) + str(love_score))
+if total_score < 10 or total_score > 90:
+    print(f"Your score is {total_score}, you go together like coke and mentos.")
+elif total_score > 40 and total_score < 50:
+    print(f"Your score is {total_score}, you are alright together.")
+else:
+    print(f"Your score is {total_score}.")
