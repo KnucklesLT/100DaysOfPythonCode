@@ -69,15 +69,21 @@ player_choice = int(input("What do you choose?  Type 0 for Rock, 1 for Paper or 
 
 choices = [rock, paper, scissors]
 
-computer_choice = random.randint(0,len(choices)-1)
-
-print(choices[player_choice])
-
-print(f"Computer chose:\n{choices[computer_choice]}")
-
-if player_choice == computer_choice:
-    print("Draw")
-elif (player_choice == 0 and computer_choice == 2) or (player_choice == 1 and computer_choice == 0) or (player_choice == 2 and computer_choice == 1):
-    print("You Won!")
+if player_choice < 0 or player_choice > 2:
+  print("Invalid input. You lose.")
 else:
+  computer_choice = random.randint(0,len(choices)-1)
+
+  print(choices[player_choice])
+
+  print(f"Computer chose:\n{choices[computer_choice]}")
+  if player_choice == computer_choice:
+      print("Draw")
+  elif (player_choice == 0 and computer_choice == 2) or (player_choice == 1 and computer_choice == 0) or (player_choice == 2 and computer_choice == 1):
+      print("You Won!")
+  else:
     print("You lose")
+
+
+
+
